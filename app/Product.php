@@ -8,7 +8,13 @@ class Product extends Model
 {
   protected $guarded = [];
 
+  protected $appends = ['brandName'];
+
+  public function getBrandNameAttribute(){
+    return $this->brand->name;
+  }
+
   public function brand(){
-    $this->belongsTo(Brand::class);
+    return $this->belongsTo(Brand::class);
   }
 }
