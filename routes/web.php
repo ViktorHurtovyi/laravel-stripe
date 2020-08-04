@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'ProductController@index')->name('products.list');
+Route::get('/checkout/{product}', 'ProductController@checkout')->name('product.checkout');

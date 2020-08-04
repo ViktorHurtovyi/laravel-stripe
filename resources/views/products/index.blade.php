@@ -19,7 +19,7 @@
                     <th scope="row">{{$product->brandName}}</th>
                     <th scope="row">{{$product->name}}</th>
                     <th scope="row">{{$product->price}}</th>
-                    <td>buy</td>
+                    <td><a href="{{route('product.checkout', $product)}}">Buy</a></td>
                 </tr>
             @endforeach
             </tbody>
