@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ProductController@index')->name('products.list');
 Route::get('/checkout/{product}', 'ProductController@checkout')->name('product.checkout');
-Route::post('/create/order', 'ProductController@createOrder')->name('create.order');
+Route::post('/create/order/{product}', 'ProductController@createOrder')->name('create.order');

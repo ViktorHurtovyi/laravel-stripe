@@ -24,10 +24,13 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-          'product_id' => 'required|integer|min:1',
           'name' => 'required|string|min:3',
           'address' => 'required|string|min:3',
-          'shipping_option' => 'required|string'
+          'shipping_option' => 'required|string',
+          'card_no' => 'required',
+          'ccExpiryMonth' => 'required',
+          'ccExpiryYear' => 'required',
+          'cvvNumber' => 'required',
         ];
     }
 }
