@@ -9,6 +9,6 @@ class ProductService
 {
   public function index(): LengthAwarePaginator
   {
-    return Product::paginate(21);
+    return Product::paginate(10);
   }
 }
